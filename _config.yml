@@ -23,17 +23,17 @@ nav_exclude:                                            # The following paths ar
 
 ### Author Info ###
 author:
-#  name              : 
+  name              : 
   image             : ./Images/avatar.JPG
 #  behance           : your_username
 # dribbble          : your_username
 #  email             : username@domain.com
 #  facebook          : your_username
   github            : tempwn
-# gitlab            : your_username
+  gitlab            : thelupwn
 # instagram         : your_username
 # kaggle            : your_username
-#  linkedin          : your_username
+  linkedin          : sai-akshith-naeeni
 #  medium            : your_username
 # soundcloud        : your_username
 # spotify           : your_username
@@ -73,12 +73,12 @@ analytics:
 
 ### Buy me a coffee ###
 # See https://www.buymeacoffee.com/
-buymeacoffee:
-  enabled: false
-  username: your_username
-  color: "#007bff"
-  message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
-  description: "Support me on Buy me a coffee!"
+#buymeacoffee:
+#  enabled: false
+#  username: your_username
+#  color: "#007bff"
+#  message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
+#  description: "Support me on Buy me a coffee!"
 
 
 ### Defaults for collections ###
