@@ -1,11 +1,11 @@
 [
   
     {
-      "title"    : "Hello World",
+      "title"    : "Getting to know about various static binary analysis softwares.",
       "category" : "",
-      "tags"     : "hello",
-      "url"      : "/blog/hello-world",
-      "date"     : "2022-04-15 00:00:00 +0530"
+      "tags"     : "re, pwn, binary analysis",
+      "url"      : "/blog/Familiarization-of-various-static-binary-analysis-softwares",
+      "date"     : "2022-04-17 00:00:00 +0530"
     } 
   
 ]
