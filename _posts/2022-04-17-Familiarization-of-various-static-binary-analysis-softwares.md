@@ -61,6 +61,8 @@ if __name__ == "__main__":
 ![alt text](/Images/r2libr-op-1.png "help")
 ![alt text](/Images/r2libr-op-2.png "Printing no. of basic blocks")
 
+- Here, the `nbbs` is the number of basic blocks present in the function.
+
 ## RetDec
 
 [source](https://github.com/s3rvac/retdec-python)
