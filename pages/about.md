@@ -9,14 +9,14 @@ weight: 3
 
 Hey!
 
-I am an information security geek intereseted in Binary Exploitation and Reverse Engineering. I've been a [CTF](https://ctftime.org/ctf-wtf/) lover and played CTFs since my university freshman.
+I am an information security geek intereseted in Binary Exploitation and Reverse Engineering. I do play [CTF]s, pwn binaries and read books sometimes.
 
 I am currently pursuing my bachelor's in Electronics and Computer Engineering at [Amrita Vishwa Vidyapeetham](https://amrita.edu/campus/amritapuri/), Amritapuri.
 
 Find me on
 - Email - saiakshith0x72[at]gmail[dot]com
-- [Twitter](https://twitter.com/thelupwn)
-- [GitHub](https://github.com/tempwn)
+- [Twitter](https://twitter.com/gilf0ile)
+- [GitHub](https://github.com/gilf0ile)
 - [Linked In](https://linkedin.com/in/sai-akshith-naeeni)
 
 <!--- Commented
