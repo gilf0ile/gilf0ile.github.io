@@ -7,7 +7,7 @@ description: This blog post gives you a glance of various static binary analysis
 ---
 - Static binary analysis examines the input file the same way attackers look at them by creating a detailed model of the file data and control path. The static analysis provides us the freedom to understand the various properties of the binary, its program flow, control flow, and the behaviors of the code without being executed. Static analysis can be carried out on source code, intermediate representations (IR), binary code, or assembly code. Static analysis is often used by security researchers to find vulnerabilities, malware, and many other security purposes. 
 - The static analysis software I'm going to use here are radare2, retdec, and IDA Pro. We can run our own scripts using python bindings by importing the static analysis software modules for automation purposes to aid us during reverse engineering or exploitation.
-- In this blog post, I want to show a glance at how to import the r2libr, retdec, and Idapython modules and use them to perform some basic operations. I'll update this blog post with scripts that will be useful and relevant for reverse engineering and binary analysis.
+- In this blog post, I want to show a glance at how to import the retdec, r2libr, and Idapython modules and use them to perform some basic operations. I'll update this blog post with scripts that will be useful and relevant for reverse engineering and binary analysis.
 
 ## Radare2
 
