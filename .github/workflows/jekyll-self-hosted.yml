@@ -1,0 +1,83 @@
+# This workflow is for self-hosted runners
+# Use this if you need to run on self-hosted infrastructure
+name: Deploy Jekyll site to Pages (Self-hosted)
+
+on:
+  # Uncomment to use this workflow instead of the main one
+  # push:
+  #   branches: ["master"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: self-hosted  # Use your self-hosted runner
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Ruby (Self-hosted runner)
+        run: |
+          # Check if Ruby is already installed in the runner tool cache
+          if [ ! -f "/opt/hostedtoolcache/Ruby/3.1.4/x64.complete" ]; then
+            echo "Installing Ruby 3.1.4 using ruby-build..."
+            
+            # Install dependencies for ruby-build
+            sudo apt-get update
+            sudo apt-get install -y git curl autoconf bison build-essential \
+              libssl-dev libyaml-dev libreadline6-dev zlib1g-dev \
+              libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev
+            
+            # Install ruby-build if not present
+            if ! command -v ruby-build &> /dev/null; then
+              git clone https://github.com/rbenv/ruby-build.git /tmp/ruby-build
+              sudo /tmp/ruby-build/install.sh
+            fi
+            
+            # Install Ruby 3.1.4
+            sudo mkdir -p /opt/hostedtoolcache/Ruby/3.1.4
+            sudo ruby-build 3.1.4 /opt/hostedtoolcache/Ruby/3.1.4/x64
+            sudo touch /opt/hostedtoolcache/Ruby/3.1.4/x64.complete
+          fi
+          
+          # Add Ruby to PATH
+          echo "/opt/hostedtoolcache/Ruby/3.1.4/x64/bin" >> $GITHUB_PATH
+          
+      - name: Install Bundler and Dependencies
+        run: |
+          export PATH="/opt/hostedtoolcache/Ruby/3.1.4/x64/bin:$PATH"
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+          
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+        
+      - name: Build with Jekyll
+        run: |
+          export PATH="/opt/hostedtoolcache/Ruby/3.1.4/x64/bin:$PATH"
+          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+          
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: self-hosted
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
