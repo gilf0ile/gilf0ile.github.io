@@ -1,0 +1,19 @@
+# OS junk
+.DS_Store
+
+# Ruby / Bundler
+.bundle/
+vendor/
+
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Image backups / temp
+Images/avatar-old.JPG
+
+# Logs and temp
+*.log
+*.tmp

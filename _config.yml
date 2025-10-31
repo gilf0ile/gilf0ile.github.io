@@ -106,3 +106,8 @@ exclude:
   - CONTRIBUTING.md
   - LICENSE
   - "*.log"
+  - vendor
+  - .bundle
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
