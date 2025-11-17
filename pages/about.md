@@ -9,11 +9,11 @@ weight: 3
 
 Hey!
 
-I am an information security geek intereseted in Binary Exploitation and Reverse Engineering. I am currently pursuing my bachelor's in Electronics and Computer Engineering at [Amrita Vishwa Vidyapeetham](https://amrita.edu/campus/amritapuri/), Amritapuri.
+I’m a cybersecurity engineer passionate about reverse engineering, binary exploitation, and building security-focused tools. I enjoy solving complex technical problems and exploring how software breaks — and how to secure it.
 
 If you want to know more about me, find me on:
 - Email - saiakshith0x72[at]gmail[dot]com
-- [Twitter](https://twitter.com/gilf0ile)
+- [Twitter](https://X.com/gilf0ile)
 - [GitHub](https://github.com/gilf0ile)
 - [Linked In](https://linkedin.com/in/sai-akshith-naeeni)
 
