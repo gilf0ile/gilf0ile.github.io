@@ -1,7 +1,7 @@
 ### Site Settings ###
 title               : Sai Akshith Naeeni
 description         : >-
-                      Information security geek exploiting binaries !!
+                      Securing systems. Engineering exploits.
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : gilf0ile/gilf0ile.github.io        # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 #remote_theme        : YoussefRaafatNasry/portfolYOU
